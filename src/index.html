@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @media only screen and (max-width:768px){
+            label{
+                width: 100%;
+            }
+            .times{
+                display: none;
+            }
+            .nav__list{
+                transform: translateX(-100%);
+            }
+            input:checked~.bars{
+                display: none;
+            }
+            input:checked~.times{
+                display:inline;
+            }
+            input:checked~.nav__list{
+                transform: translateX(0);
+            }
+        }
+         @media only screen and (min-width:768px){
+            .nav__list{
+                position: static;
+            }
+        } 
+    </style>
+</head>
+
+<body>
+   <header class="bg-slate-400">
+    <nav class="nav max-w-1300 mx-auto px-5 md:flex justify-between items-center relative md:py-5">
+        <a href="#" class="logo uppercase text-slate-100 font-sans font-bold text-xl md:pt-5">Logo</a>
+       <label>
+        <input type="checkbox" class="xs:opacity-0  md:hidden">
+        <span class="bars absolute  right-5 top-0 md:hidden text-slate-100"><i class="fa-solid fa-bars"></i></span>
+        <span class="times absolute right-5 top-0 md:hidden text-slate-100"><i class="fa-solid fa-xmark"></i></span>
+        <ul class="nav__list xs:fixed md:static bg-slate-400 xs:w-full left-0 top-7 transition-all xs:py-5 md:flex items-center">
+            <li class="nav__item xs:text-center mt-5 mr-5"><a href="#" class="nav__link text-xl font-sans font-semibold text-slate-100">Home</a></li>
+            <li class="nav__item xs:text-center mt-5 mr-5"><a href="#" class="nav__link text-xl font-sans font-semibold text-slate-100">Blog</a></li>
+            <li class="nav__item xs:text-center mt-5 mr-5"><a href="#" class="nav__link text-xl font-sans font-semibold text-slate-100">Contact</a></li>
+            <li class="nav__item xs:text-center mt-5 mr-5"><a href="#" class="nav__link text-xl font-sans font-semibold text-slate-100">Pricing</a></li>
+        </ul>
+       </label>
+    </nav>
+   </header>
+   <section class="user">
+       <div class="max-w-1300 mx-auto px-5">
+           <form action="#" class="xs:w-full xs:text-center mt-5 sm:flex-col sm:flex sm:items-center md:flex-row md:items-start ">
+            <div class="box-name w-full md:ml-5 md:1/2">
+                <input  class="border-b-2 pb-2 mt-4 border-slate-500 xs:w-full" type="text" name="name" placeholder="Firts name">
+                <input class="border-b-2 pb-2 mt-4 border-slate-500 xs:w-full" type="text" name="lname" placeholder="Last name">
+            </div>
+            <div class="box-nickname w-full md:ml-5 md:1/2">
+                <input class="border-b-2 pb-2 mt-4 border-slate-500 xs:w-full" type="text" name="username" placeholder="User name">
+                <input class="border-b-2 pb-2 mt-4 border-slate-500 xs:w-full" type="password" name="password" placeholder="Password">
+                <input class="border-b-2 pb-2 mt-4 border-slate-500 xs:w-full" type="password" name="password" placeholder="Confirm password">
+                <button type="submit" class="border-2 border-slate-500 mt-5 py-3 px-6 xs:w-40 rounded-md hover:text-white hover:bg-slate-500">Submit</button>
+            </div>
+           </form>
+       </div>
+   </section>
+</body>
+
+</html>
